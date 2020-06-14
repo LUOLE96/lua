@@ -1,0 +1,14 @@
+function createCounterTimer(second)
+    local ms = second * 1000
+    local function countDown()
+        ms = ms - 1
+        return ms
+    end
+    return countDown
+end
+
+timer1 = createCounterTimer(1)
+
+for i = 1,3 do
+    print(timer1())
+end
